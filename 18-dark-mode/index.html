@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #68d391;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #68d391;
+      }
+    </style>
+    <title>Dark Mode</title>
+  </head>
+  <body>
+    <!-- By default, you can have your project use whatever mode your OS is using. You can use "dark:{class}". You can also set your config to use a class instead of using your OS mode -->
+    <div
+      class="xl container mx-auto mt-10 rounded-xl bg-white px-6 py-8 shadow dark:bg-slate-900"
+    >
+      <h3 class="font-medium tracking-tight text-slate-900 dark:text-white">
+        Lorem ipsum dolor sit.
+      </h3>
+      <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        saepe dolore, amet sint cum culpa ad totam! Inventore voluptates totam
+        maxime dolore, similique, veniam velit vero error eum dolorem sunt,
+        sequi iure at consequuntur. Ut numquam expedita optio. Alias asperiores
+        dolorem totam beatae dicta, laboriosam ab rem explicabo repellendus
+        omnis!
+      </p>
+    </div>
+    <div class="flex items-center justify-center gap-4 p-8">
+      <div class="relative w-64 select-none transition duration-700 ease-in">
+        <input
+          type="checkbox"
+          name="toggle"
+          id="toggle"
+          class="toggle-checkbox absolute block h-20 w-20 cursor-pointer appearance-none rounded-full border-[0.5rem] border-gray-300 bg-blue-500"
+        />
+        <label
+          for="toggle"
+          class="toggle-label block h-20 cursor-pointer rounded-full bg-gray-300"
+        ></label>
+      </div>
+      <label for="toggle" class="text-lg text-gray-700">Toggle Dark Mode</label>
+    </div>
+    <!--  -->
+    <div>
+      <div
+        class="relative inline-block w-10 select-none align-middle transition duration-200 ease-in"
+      >
+        <input
+          type="checkbox"
+          name="toggle1"
+          id="toggle1"
+          class="toggle-checkbox absolute block h-6 w-6 cursor-pointer appearance-none rounded-full border-4 bg-white"
+        />
+        <label
+          for="toggle1"
+          class="toggle-label block h-6 cursor-pointer rounded-full bg-gray-300"
+        ></label>
+      </div>
+      <label for="toggle1" class="text-lg text-gray-700"
+        >Toggle Dark Mode</label
+      >
+    </div>
+    <!--  -->
+    <script>
+      const toggleCheckbox = document.getElementById("toggle");
+      toggleCheckbox.addEventListener("change", function () {
+        this.checked
+          ? document.documentElement.classList.add("dark")
+          : document.documentElement.classList.remove("dark");
+      });
+
+      const toggleCheckbox1 = document.getElementById("toggle1");
+      toggleCheckbox1.addEventListener("change", function () {
+        this.checked
+          ? document.documentElement.classList.add("dark")
+          : document.documentElement.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Credit for toggle button style
+https://tailwindcomponents.com/component/toggle-switch
+ -->
