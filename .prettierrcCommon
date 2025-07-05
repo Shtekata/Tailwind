@@ -1,0 +1,10 @@
+npm install -D prettier prettier-plugin-tailwindcss prettier-plugin-classnames prettier-plugin-merge
+
+{
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-classnames",
+    "prettier-plugin-merge"
+  ],
+  "printWidth": 82
+}

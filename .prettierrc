@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-classnames",
+    "prettier-plugin-merge"
+  ],
+  "htmlWhitespaceSensitivity": "ignore",
+  "printWidth": 77,
+  "organizeAttributes": {
+    "order": [
+      "class",
+      "id",
+      "name",
+      "src",
+      "alt",
+      "title"
+    ],
+    "multiline": "preserve"
+  }
+}
