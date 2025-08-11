@@ -1,17 +1,17 @@
 // console.log('TAILWIND CONFIG IS LOADED')
 export default {
-  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
     },
     extend: {
       letterSpacing: {
-        widest: 'var(--spacing-widest)',
+        widest: "var(--spacing-widest)",
       },
     },
   },
-}
+};
