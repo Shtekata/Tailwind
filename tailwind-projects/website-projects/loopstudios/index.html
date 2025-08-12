@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet" />
+    <script src="./js/script.js" defer></script>
     <link href="./css/style.css" rel="stylesheet" />
     <title>LOOPSTUDIOS</title>
   </head>
@@ -40,9 +41,23 @@
               <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
             </div>
           </div>
-          <!-- @todo Hamburger Button -->
+          <!-- Hamburger Button -->
+          <div class="md:hidden">
+            <button class="hamburger z-1 block md:hidden" id="menu-btn" type="button">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
         </nav>
-        <!-- @todo - Mobile Menu -->
+        <!-- Mobile Menu -->
+        <div class="absolute left-0 top-0 hidden min-h-screen w-full flex-col space-y-3 bg-black pl-12 pt-40 text-lg uppercase text-white" id="menu">
+          <a class="hover:text-pink-500" href="#">About</a>
+          <a class="hover:text-pink-500" href="#">Careers</a>
+          <a class="hover:text-pink-500" href="#">Events</a>
+          <a class="hover:text-pink-500" href="#">Products</a>
+          <a class="hover:text-pink-500" href="#">Support</a>
+        </div>
         <div class="my-32 max-w-lg border-2 p-4 font-sans text-4xl uppercase text-white md:p-10 md:text-6xl">Impressive Experiences That Deliver</div>
       </div>
     </section>
